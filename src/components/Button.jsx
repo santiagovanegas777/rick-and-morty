@@ -1,13 +1,17 @@
 
 
-const Button =({titulo})=>{
+const Button =({titulo, counter,changeCounter})=>{
     
+    const handelClick =()=>{
+        console.log("Me han Clicado")
+        changeCounter(counter + 1)
+    }
 
     
     return(
         <>
-        <button>¿What is your favorite?</button>
-        <button>{titulo}</button>
+        <button onClick={handelClick}>{titulo}</button>
+        
      
         
         </>
